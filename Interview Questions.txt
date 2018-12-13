@@ -1,0 +1,115 @@
+
+Projects Plus Points:
+1. Photonic Push Notification
+2. File Locker 10000+ Downloads
+3. Intelligent sales man MAPS 
+4. Business App - SQLSRV Microsoft SQLSRV Server
+5. KINDLE Book Reader - Library Updation -Radaee PDF Reader
+6. Ad On Smart Media - PayUMoney Payment Gateway
+7. True Caller Test -  Event Handling
+8. Firebase Chat app
+9. Expresso - Socket Programming
+
+
+
+
+
+
+
+
+
+1. Difference between 
+    a. String s = "Hello"; and 
+    b. String s = new String("Hello");
+    
+    Here, a. is a String Literal and b. is String Object
+    String Literals are stored in String Pool which is stored in Main Heap.
+    String pool is used to reuse the readymade string literal (Basically a string with double quotes "" )
+    String Objects are stored in Main Heap itself.
+
+2. Types of Inheritance in Java
+    Single Inheritance
+    Multiple Inheritance
+    Multilevel Inheritance
+    Hirarchical Inheritance
+    Hybrid Inheritance
+
+3. Can we have multiple Launcher Activity in android 
+    Yes 
+    The first one in sequence gets executed.
+
+4. Define Fragment and Fragment Lifecycle how it coordinates with activity lifecycle ?
+    Fragment is a portion of UI in Activity which is flexible with different screensizes and can be reused.
+    Fragments lifecycle is directly affected by the host activities lifecycle.
+    Fragment Lifecycle:
+        1. onAttach()
+        2. onCreateView()
+        3. onActivityCreated()
+        4. onStart()
+        5. onResume()
+        6. onPause()
+        7. onStop()
+        8. onDestroyView()
+        9. onDestroy()
+        10. onDetach()
+
+    
+5. Explain Loaders and all its callback methods?
+    Loader API lets you load data from Content Provider
+    Runs on Saparate thread
+    provides callback methods
+
+    Starting Loader:
+    getLoaderManager().initLoader(0,null,this);
+
+6. Explain Content Provider ?
+    Provides a secure way to access data from other applications
+    Accessing Data:
+    Cursor mcursor = getContentResolver().query(UserDictonary.Words.CONTENT_URI,
+    mProjection,mSelectClause,mSelectArg,mSortOrder);
+
+    Inserting Data:
+    ContentValues values = new ContentValues();
+    values.put(UserDictonary.Words.APP_ID,"app.com");
+    values.put(UserDictonary.Words.LOCALE,"en_US");
+    Uri newuri = getContentResolver().insert(UserDictonary.Words.CONTENT_URI,values);
+
+7. Explain Android Backup Framework ?
+    Android provides following backupframework to app backup data to cloud
+    AutoBackup 
+    Key/value backup
+
+    Autobackup preserves user data by uploading to Google Drive 
+
+    Key/value backup preserves app data by uploading it to Android backup service
+
+8. Explain AlarmManager ?
+    When you need to run code at specific time in future. 
+
+    AlarmManager alrmmgr = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+    Intent intent = new Intent(this,MyBroadcastReciever.class);
+    PendingIntent pi = PendingIntent.getBraodcast(context,0,intent,0);
+    Calender cal = Calender.getInstance();
+    cal.setTimeInMillis(System.currentTimeMillis());
+    alermmgr.set(AlarmManager.RTC_WAKEUP,cal.getTimeInMillis(),1000*60*20, pi);
+
+
+9. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
